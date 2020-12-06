@@ -44,7 +44,7 @@ app.use(multer({storage: fileStorage, fileFilter: fileFilter}).single('image'))
 app.use(express.static(path.join(__dirname, './images/')))
 
 app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*')
+    res.setHeader('Access-Control-Allow-Origin', 'https://michaelc1999.github.io/')
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, PATCH, DELETE')
     res.setHeader('Access-Control-Allow-Headers', '*')
     next();

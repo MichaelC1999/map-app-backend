@@ -41,7 +41,7 @@ exports.getMarkers = async (req, res, next) => {
     try {
         const markers = await LogMarker.find();
         res.json({message: "Markers fetched", markers: markers});
-    } catch (err) {
+    } catch (error) {
         res.status(422)
         next(error);
     }
